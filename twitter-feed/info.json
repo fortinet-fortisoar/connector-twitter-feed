@@ -1,0 +1,138 @@
+{
+  "name": "twitter-feed",
+  "label": "Twitter Feed",
+  "description": "Twitter feed connector fetches indicators on daily basis.<br></br> This connector has a dependency on the <a href=\"/content-hub/all-content/?contentType=solutionpack&amp;tag=ThreatIntelManagement\" target=\"_blank\" rel=\"noopener\">Threat Intel Management Solution Pack</a>. Install the Solution Pack before enabling ingestion of Threat Feeds from this source.",
+  "publisher": "Fortinet",
+  "cs_approved": true,
+  "cs_compatible": true,
+  "version": "1.0.0",
+  "category": "Threat Intelligence",
+  "tags": [
+    "ThreatIntel"
+  ],
+  "ingestion_supported": true,
+  "ingestion_modes": [
+    "scheduled"
+  ],
+  "ingestion_preferences": {
+    "modules": [
+      "threat_intel_feeds",
+      "indicators"
+    ]
+  },
+  "help_online": "",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "name": "server_url",
+        "placeholder": "e.g http://www.tweettioc.com/v1/tweets/daily/full",
+        "value": "http://www.tweettioc.com/v1/tweets/daily/full",
+        "description": "Server url to get Twitter feeds data"
+      },
+      {
+        "title": "Verify SSL",
+        "description": "Specifies whether the SSL certificate is to be verified or not.By default, this option is set as True.",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "type": "checkbox",
+        "name": "verify_ssl",
+        "value": true
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_indicators",
+      "title": "Get Indicators",
+      "category": "investigation",
+      "annotation": "get_indicators",
+      "description": "Retrieves a list of all indicators from Twitter feed on daily basis",
+      "parameters": [
+        {
+          "title": "Filter Feeds by",
+          "tooltip": "Filter feed indicators by Username for filter by username, Hashtag for filtered by the hashtag and Full for all. Default value is set as Full",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "select",
+          "options": [
+            "Full",
+            "Username",
+            "Hashtag"
+          ],
+          "onchange": {
+            "Username": [
+              {
+                "title": "Username",
+                "tooltip": "Enter username to filter feeds by input username",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "filter_value",
+                "description": "Enter username to filter feeds by input username"
+              }
+            ],
+            "Hashtag": [
+              {
+                "title": "Hashtag",
+                "tooltip": "Enter Hashtag to filter feeds by input Hashtag",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "filter_value",
+                "description": "Enter Hashtag to filter feeds by input Hashtag"
+              }
+            ]
+          },
+          "name": "feed_type",
+          "value": "Full",
+          "description": "Filter feed indicators by Username for filter by username, Hashtag for filtered by the hashtag and Full for all. Default value is set as Full"
+        }
+
+
+      ],
+      "enabled": true,
+      "output_schema": [
+        {
+          "reference": [
+          ],
+          "md5": [],
+          "sha1": [],
+          "sha256": [
+          ],
+          "mail": [],
+          "ip": [],
+          "domain": [],
+          "url": [],
+          "tweet": {
+            "user": "",
+            "tweet": "",
+            "id": "",
+            "retweets": "",
+            "link": "",
+            "mentions": [
+            ],
+            "hashtags": [
+            ],
+            "date": {
+              "$date": ""
+            },
+            "timestamp": ""
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
