@@ -4,7 +4,7 @@
   FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
   Copyright end """
 
-import requests, datetime
+import requests, json
 from connectors.core.connector import get_logger, ConnectorError
 
 logger = get_logger('twitter-feed')
@@ -31,7 +31,7 @@ def make_rest_call(config, url):
                 return response.json()
             else:
                 logger.debug('Response not in json format')
-                return response.text
+                return json.loads(response.text)
         else:
             raise ConnectorError(
                 'Unable to access the feed URL. Check connectivity and retry. Error status: {0}, response = {1}'.format(response.status_code, response.text))
