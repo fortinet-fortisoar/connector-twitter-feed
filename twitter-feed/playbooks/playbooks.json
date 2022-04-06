@@ -2,17 +2,20 @@
   "type": "workflow_collections",
   "data": [
     {
-      "@context": "/api/3/contexts/WorkflowCollection",
       "@type": "WorkflowCollection",
       "name": "Sample - Twitter Feed - 1.0.0",
       "description": "Sample playbooks for \"Twitter Feed\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": "/api/3/images/e985e40e-b5fd-46d1-a5f5-0c964a0ca820",
-      "id": 114,
-      "createDate": 1649139011.977038,
-      "modifyDate": 1649139011.977038,
-      "recordTags": [],
+      "image": "/api/3/images/b8320296-e6f1-4e6d-9a90-ae1f34a9e370",
+      "uuid": "9653131b-8760-4bc0-968d-6864fa9d9c54",
+      "id": 42,
+      "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+      "createDate": 1649221590.371421,
+      "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+      "modifyDate": 1649221590.371421,
       "deletedAt": null,
+      "importedBy": [],
+      "recordTags": [],
       "workflows": [
         {
           "@type": "Workflow",
@@ -28,7 +31,7 @@
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1649138660,
-          "collection": "/api/3/workflow_collections/26faaa9a-047a-4c34-a057-205eaef40f3d",
+          "collection": "/api/3/workflow_collections/9653131b-8760-4bc0-968d-6864fa9d9c54",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/1d8ed5ee-7c40-47f3-a532-e80f9977c930",
           "steps": [
@@ -97,18 +100,19 @@
           ],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "647543d1-9fa4-47bc-9d3b-19c2bbb6bf23",
+          "id": "173",
+          "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+          "createDate": 1649221590.372829,
+          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+          "modifyDate": 1649221590.372829,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "twitter-feed",
             "Twitter"
-          ],
-          "id": "1050",
-          "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1649139011.977855,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1649139011.977855,
-          "owners": [],
-          "isPrivate": false,
-          "deletedAt": null
+          ]
         },
         {
           "@type": "Workflow",
@@ -124,7 +128,7 @@
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1649074622,
-          "collection": "/api/3/workflow_collections/26faaa9a-047a-4c34-a057-205eaef40f3d",
+          "collection": "/api/3/workflow_collections/9653131b-8760-4bc0-968d-6864fa9d9c54",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/738ba913-7978-4b1a-8f4d-1ca1b668f2e0",
           "steps": [
@@ -283,20 +287,21 @@
           ],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "a46073d2-5b25-405d-8d1d-ba69f8b8c248",
+          "id": "174",
+          "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+          "createDate": 1649221590.373499,
+          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+          "modifyDate": 1649221590.373499,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "dataingestion",
             "ingest",
             "twitter-feed",
             "Twitter"
-          ],
-          "id": "1051",
-          "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1649139011.978403,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1649139011.978403,
-          "owners": [],
-          "isPrivate": false,
-          "deletedAt": null
+          ]
         },
         {
           "@type": "Workflow",
@@ -313,8 +318,8 @@
             "lastPullTime"
           ],
           "synchronous": false,
-          "lastModifyDate": 1649148281,
-          "collection": "/api/3/workflow_collections/26faaa9a-047a-4c34-a057-205eaef40f3d",
+          "lastModifyDate": 1649226280,
+          "collection": "/api/3/workflow_collections/9653131b-8760-4bc0-968d-6864fa9d9c54",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/bfb42714-5bf9-47de-95f3-36f3d2d135c4",
           "steps": [
@@ -383,63 +388,6 @@
             },
             {
               "@type": "WorkflowStep",
-              "name": "Configuration",
-              "description": null,
-              "arguments": {
-                "tlp": "White",
-                "expiry": 90,
-                "tlp_map": "{'Red': {{'TrafficLightProtocol'| picklist('Red') }}, 'Amber': {{'TrafficLightProtocol'| picklist('Amber') }}, 'Green': {{'TrafficLightProtocol'| picklist('Green') }}, 'White': {{'TrafficLightProtocol'| picklist('White') }}}",
-                "confidence": "50",
-                "reputation": "Suspicious",
-                "reputation_map": "{'Good': {{'IndicatorReputation'| picklist('Good') }}, 'Malicious': {{'IndicatorReputation'| picklist('Malicious') }}, 'Suspicious': {{'IndicatorReputation'| picklist('Suspicious') }}, 'TBD': {{'IndicatorReputation'| picklist('TBD') }}, 'No Reputation Available': {{'IndicatorReputation'| picklist('No Reputation Available') }}}",
-                "threat_intel_feeds_tLP_map": "{}",
-                "threat_intel_feeds_reputation_map": "{}",
-                "threat_intel_feeds_typeOfFeed_map": "{}",
-                "threat_intelligence_typeofindicator_map": "{'domain-name-value': {{'ThreatIntelFeedType'| picklist('Domain') }}, 'file-name': {{'ThreatIntelFeedType'| picklist('Filename') }}, 'file-hashes-MD5': {{'ThreatIntelFeedType'| picklist('FileHash-MD5') }}, 'file-hashes-SHA-1': {{'ThreatIntelFeedType'| picklist('FileHash-SHA1') }}, 'file-hashes-SHA-256': {{'ThreatIntelFeedType'| picklist('FileHash-SHA256') }}, 'ipv4-addr-value': {{'ThreatIntelFeedType'| picklist('IPv4 Address') }}, 'ipv6-addr-value': {{'ThreatIntelFeedType'| picklist('IPv6 Address') }}, 'windows-registry-key-key': {{'ThreatIntelFeedType'| picklist('Registry') }}, 'process-name': {{'ThreatIntelFeedType'| picklist('Process') }}, 'url-value': {{'ThreatIntelFeedType'| picklist('URL') }}, 'user-account-value': {{'ThreatIntelFeedType'| picklist('User') }}, 'email-message-from_ref-value': {{'ThreatIntelFeedType'| picklist('Email Address') }}, 'email-message-sender_ref-value': {{'ThreatIntelFeedType'| picklist('Email Address') }} }"
-              },
-              "status": null,
-              "top": "140",
-              "left": "80",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "3c113637-aacb-46b4-a9dc-b1f69879ab8e"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Create Record",
-              "description": null,
-              "arguments": {
-                "when": "{{vars.data | length > 0}}",
-                "for_each": {
-                  "item": "{{vars.data}}",
-                  "__bulk": true,
-                  "parallel": false,
-                  "condition": "",
-                  "batch_size": 1000
-                },
-                "resource": {
-                  "tLP": "{% if vars.tlp %}{{ vars.tlp | resolveRange(vars.tlp_map)}}{% else %}None{% endif %}",
-                  "value": "{{vars.item.value}}",
-                  "source": "Twitter Feed",
-                  "__replace": "",
-                  "expiresOn": "{% if vars.expiry %}{{ arrow.get().int_timestamp + (vars.expiry | int)*24*60*60 }}{% else %}None{% endif %}",
-                  "confidence": "{% if vars.confidence %}{{ vars.confidence }}{% else %}None{% endif %}",
-                  "reputation": "{% if vars.reputation %}{{ vars.reputation | resolveRange(vars.reputation_map)}}{% else %}None{% endif %}",
-                  "sourceData": "{{vars.item | toJSON}}",
-                  "typeOfFeed": "{% if vars.item.type %}{{ vars.item.type | resolveRange(vars.threat_intelligence_typeofindicator_map12)}}{%else%}None{%endif%}"
-                },
-                "_showJson": false,
-                "collection": "/api/ingest-feeds/threat_intel_feeds",
-                "__recommend": [],
-                "step_variables": []
-              },
-              "status": null,
-              "top": "400",
-              "left": "980",
-              "stepType": "/api/3/workflow_step_types/7b221880-716b-4726-a2ca-5e568d330b3e",
-              "uuid": "ff9f3b17-cc0e-4be1-92c6-c5bf30507746"
-            },
-            {
-              "@type": "WorkflowStep",
               "name": "Return Sample Data",
               "description": null,
               "arguments": {
@@ -494,6 +442,62 @@
               "left": "80",
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
               "uuid": "bfb42714-5bf9-47de-95f3-36f3d2d135c4"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Create Record",
+              "description": null,
+              "arguments": {
+                "when": "{{vars.data | length > 0}}",
+                "for_each": {
+                  "item": "{{vars.data}}",
+                  "__bulk": true,
+                  "parallel": false,
+                  "condition": "",
+                  "batch_size": 1000
+                },
+                "resource": {
+                  "tLP": "{% if vars.tlp %}{{ vars.tlp | resolveRange(vars.tlp_map)}}{% else %}None{% endif %}",
+                  "value": "{{vars.item.value}}",
+                  "source": "Twitter Feed",
+                  "__replace": "",
+                  "expiresOn": "{% if vars.expiry %}{{ arrow.get().int_timestamp + (vars.expiry | int)*24*60*60 }}{% else %}None{% endif %}",
+                  "confidence": "{% if vars.confidence %}{{ vars.confidence }}{% else %}None{% endif %}",
+                  "reputation": "{% if vars.reputation %}{{ vars.reputation | resolveRange(vars.reputation_map)}}{% else %}None{% endif %}",
+                  "sourceData": "{{vars.item | toJSON}}",
+                  "typeOfFeed": "{% if vars.item.type %}{{ vars.item.type | resolveRange(vars.threat_intelligence_typeofindicator_map)}}{%else%}None{%endif%}"
+                },
+                "_showJson": false,
+                "collection": "/api/ingest-feeds/threat_intel_feeds",
+                "__recommend": [],
+                "step_variables": []
+              },
+              "status": null,
+              "top": "400",
+              "left": "980",
+              "stepType": "/api/3/workflow_step_types/7b221880-716b-4726-a2ca-5e568d330b3e",
+              "uuid": "ff9f3b17-cc0e-4be1-92c6-c5bf30507746"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Configuration",
+              "description": null,
+              "arguments": {
+                "tlp": "White",
+                "expiry": 90,
+                "tlp_map": "{'Red': {{'TrafficLightProtocol'| picklist('Red') }}, 'Amber': {{'TrafficLightProtocol'| picklist('Amber') }}, 'Green': {{'TrafficLightProtocol'| picklist('Green') }}, 'White': {{'TrafficLightProtocol'| picklist('White') }}}",
+                "confidence": "50",
+                "reputation": "Suspicious",
+                "reputation_map": "{'Good': {{'IndicatorReputation'| picklist('Good') }}, 'Malicious': {{'IndicatorReputation'| picklist('Malicious') }}, 'Suspicious': {{'IndicatorReputation'| picklist('Suspicious') }}, 'TBD': {{'IndicatorReputation'| picklist('TBD') }}, 'No Reputation Available': {{'IndicatorReputation'| picklist('No Reputation Available') }}}",
+                "threat_intel_feeds_tLP_map": "{}",
+                "threat_intel_feeds_reputation_map": "{}",
+                "threat_intelligence_typeofindicator_map": "{'domain': {{'ThreatIntelFeedType'| picklist('Domain') }}, \n'file-name': {{'ThreatIntelFeedType'| picklist('Filename') }}, 'md5': {{'ThreatIntelFeedType'| picklist('FileHash-MD5') }}, 'sha1': {{'ThreatIntelFeedType'| picklist('FileHash-SHA1') }}, 'sha256': {{'ThreatIntelFeedType'| picklist('FileHash-SHA256') }}, \n'ip': {{'ThreatIntelFeedType'| picklist('IPv4 Address') }}, \n 'url': {{'ThreatIntelFeedType'| picklist('URL') }}, \n'user': {{'ThreatIntelFeedType'| picklist('User') }}, \n'mail': {{'ThreatIntelFeedType'| picklist('Email Address') }} }"
+              },
+              "status": null,
+              "top": "140",
+              "left": "80",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "uuid": "3c113637-aacb-46b4-a9dc-b1f69879ab8e"
             }
           ],
           "routes": [
@@ -535,15 +539,6 @@
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Resolve Range -> Is data only for mapping",
-              "targetStep": "/api/3/workflow_steps/2225c278-5b84-4542-8cbf-b39c128e20d7",
-              "sourceStep": "/api/3/workflow_steps/659738ae-62ad-44b6-8eed-59ff3f042a56",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "de93419c-8090-42e0-a5ee-2e2ef778ffb2"
-            },
-            {
-              "@type": "WorkflowRoute",
               "name": "Configuration -> Resolve Range",
               "targetStep": "/api/3/workflow_steps/659738ae-62ad-44b6-8eed-59ff3f042a56",
               "sourceStep": "/api/3/workflow_steps/3c113637-aacb-46b4-a9dc-b1f69879ab8e",
@@ -568,25 +563,35 @@
               "label": null,
               "isExecuted": false,
               "uuid": "816f9377-ee3d-4211-b6f6-795de8b339b8"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Resolve Range -> Is data only for mapping",
+              "targetStep": "/api/3/workflow_steps/2225c278-5b84-4542-8cbf-b39c128e20d7",
+              "sourceStep": "/api/3/workflow_steps/659738ae-62ad-44b6-8eed-59ff3f042a56",
+              "label": null,
+              "isExecuted": false,
+              "uuid": "31ce5612-9df0-4a41-af0d-e2a4babd0338"
             }
           ],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "e1449b09-5dab-45cd-b51a-40dff704de6e",
+          "id": "175",
+          "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+          "createDate": 1649221590.374041,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1649226280.10718,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "dataingestion",
             "create",
             "fetch",
             "twitter-feed",
             "Twitter"
-          ],
-          "id": "1052",
-          "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1649139011.979131,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1649148281.00761,
-          "owners": [],
-          "isPrivate": false,
-          "deletedAt": null
+          ]
         }
       ]
     }
