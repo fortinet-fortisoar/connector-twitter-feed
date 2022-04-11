@@ -12,7 +12,7 @@ logger = get_logger('twitter-feed')
 
 def check_health(config):
     try:
-        url = '/full'
+        url = '/v1/tweets/daily/full'
         resp = make_rest_call(config, url)
         if resp:
             return True
@@ -23,7 +23,9 @@ def check_health(config):
 
 def make_rest_call(config, url):
     try:
-        server_url = config.get('server_url').strip('/full')
+        server_url = config.get('server_url').strip('/')
+        if not server_url.startswith('https://') and not server_url.startswith('http://'):
+            server_url = 'http://{0}'.format(server_url)
         logger.info('executing url ={}'.format(server_url+url))
         response = requests.get(server_url+url, verify=config.get('verify_ssl'))
         if response.ok:
@@ -50,11 +52,11 @@ def get_indicators(config, params):
     try:
         feed_type = params.get('feed_type', None)
         if feed_type == 'Username':
-            url = '/full/user/{0}'.format(params.get('filter_value'))
+            url = '/v1/tweets/daily/full/user/{0}'.format(params.get('filter_value'))
         elif feed_type == 'Hashtag':
-            url = '/full/hashtags/{0}'.format(params.get('filter_value'))
+            url = '/v1/tweets/daily/full/hashtags/{0}'.format(params.get('filter_value'))
         else:
-            url = '/full'
+            url = '/v1/tweets/daily/full'
         resp = make_rest_call(config, url)
         return resp
     except Exception as Err:
